@@ -11,6 +11,8 @@ while ($data = mysqli_fetch_assoc($cata_info)) {
 
 if (isset($_POST['user_register_btn'])) {
     $reg_msg =  $obj->user_register($_POST);
+    echo '<script>alert("Success!")</script>';
+    header('location:user_login.php');
 }
 
 if(isset($_SESSION['user_id'])){
